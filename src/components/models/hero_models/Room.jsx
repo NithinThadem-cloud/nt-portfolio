@@ -10,7 +10,7 @@ import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 
 export function Room(props) {
-  const { nodes, materials } = useGLTF("/models/nithin.glb");
+  const { nodes, materials } = useGLTF("/models/nithin-time.glb");
   console.log(nodes);
   const screensRef = useRef(); // Initialize the ref
 
@@ -74,7 +74,7 @@ export function Room(props) {
   );
 }
 
-useGLTF.preload("/models/nithin.glb");
+useGLTF.preload("/models/nithin-time.glb");
 /*
 import React, { useRef } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
