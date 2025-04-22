@@ -4,6 +4,8 @@ Command: npx gltfjsx@6.5.3 nithin.glb
 */
 
 import React, { useRef } from "react";
+import { useLoader } from "@react-three/fiber";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
@@ -11,7 +13,7 @@ import * as THREE from "three";
 
 export function Room(props) {
   const { nodes, materials } = useGLTF("/models/nithin-time.glb");
-  console.log(nodes);
+  console.log(nodes, materials);
   const screensRef = useRef(); // Initialize the ref
 
   // Use existing materials from the .glb file
@@ -32,7 +34,7 @@ export function Room(props) {
         <EffectComposer>
           <SelectiveBloom
             selection={screensRef.current}
-            intensity={1.5}
+            intensity={1.9}
             luminanceThreshold={0.2}
             luminanceSmoothing={0.9}
             blendFunction={BlendFunction.ADD}
@@ -45,28 +47,28 @@ export function Room(props) {
         ref={screensRef} // Link screensRef to this mesh
         geometry={nodes.avaturn_body.geometry}
         material={bodyMaterial}
-        scale={1.5}
+        scale={2.5}
       />
 
       {/* Render the first hairstyle */}
       <mesh
         geometry={nodes.avaturn_hair_0.geometry}
         material={hair0Material}
-        scale={1.5}
+        scale={2.5}
       />
 
       {/* Render the facial features ("look") */}
       <mesh
         geometry={nodes.avaturn_look_0.geometry}
         material={lookMaterial}
-        scale={1.5}
+        scale={2.5}
       />
 
       {/* Render the shoes */}
       <mesh
         geometry={nodes.avaturn_shoes_0.geometry}
         material={shoesMaterial}
-        scale={1.5}
+        scale={2.5}
       />
 
       {/* Add more parts as needed */}
