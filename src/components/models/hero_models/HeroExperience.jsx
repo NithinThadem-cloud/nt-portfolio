@@ -6,6 +6,8 @@ import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 import { Suspense } from "react";
+import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
 
 const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -14,8 +16,8 @@ const HeroExperience = () => {
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
       {/* deep blue ambient */}
-      <ambientLight intensity={0.2} color="#1a1a40" />
-      {/* Configure OrbitControls to disable panning and control zoom based on device type */}
+      <ambientLight intensity={1} color="#ffffff" />
+      {/* Configure OrbitControls to disable panning and control zoom based on a device type */}
       <OrbitControls
         enablePan={false} // Prevents panning of the scene
         enableZoom={!isTablet} // Disables zoom on tablets
