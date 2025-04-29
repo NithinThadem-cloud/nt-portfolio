@@ -60,7 +60,7 @@ export function Room(props) {
             )}
 
             {/* Group for animations */}
-            <group ref={groupRef} scale={2.5}>
+            <group ref={groupRef} scale={3.2}>
                 {/* Render the avatar body and link it to screensRef */}
                 <mesh
                     ref={screensRef} // Link screensRef to this mesh

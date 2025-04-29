@@ -6,40 +6,38 @@ import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 import { Suspense } from "react";
-import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 
 const HeroExperience = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
-  return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-      {/* deep blue ambient */}
-      <ambientLight intensity={1} color="#ffffff" />
-      {/* Configure OrbitControls to disable panning and control zoom based on a device type */}
-      <OrbitControls
-        enablePan={false} // Prevents panning of the scene
-        enableZoom={!isTablet} // Disables zoom on tablets
-        maxDistance={20} // Maximum distance for zooming out
-        minDistance={5} // Minimum distance for zooming in
-        minPolarAngle={Math.PI / 5} // Minimum angle for vertical rotation
-        maxPolarAngle={Math.PI / 2} // Maximum angle for vertical rotation
-      />
+    return (
+        <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+            {/* deep blue ambient */}
+            <ambientLight intensity={3} color="#fffff" />
+            {/* Configure OrbitControls to disable panning and control zoom based on device type */}
+            <OrbitControls
+                enablePan={false} // Prevents panning of the scene
+                enableZoom={!isTablet} // Disables zoom on tablets
+                maxDistance={20} // Maximum distance for zooming out
+                minDistance={5} // Minimum distance for zooming in
+                minPolarAngle={Math.PI / 5} // Minimum angle for vertical rotation
+                maxPolarAngle={Math.PI / 2} // Maximum angle for vertical rotation
+            />
 
-      <Suspense fallback={null}>
-        <HeroLights />
-        <Particles count={100} />
-        <group
-          scale={isMobile ? 0.7 : 1}
-          position={[0, -3.5, 0]}
-          rotation={[0, -Math.PI / 4, 0]}
-        >
-          <Room />
-        </group>
-      </Suspense>
-    </Canvas>
-  );
+            <Suspense fallback={null}>
+                <HeroLights />
+                <Particles count={100} />
+                <group
+                    scale={isMobile ? 0.7 : 1}
+                    position={[0, -3.5, 0]}
+                    rotation={[0, 0, 0]}
+                >
+                    <Room />
+                </group>
+            </Suspense>
+        </Canvas>
+    );
 };
 
 export default HeroExperience;
