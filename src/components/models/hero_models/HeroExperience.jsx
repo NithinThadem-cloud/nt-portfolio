@@ -25,7 +25,7 @@ const HeroExperience = () => {
             camera={{ position: [0, 0, 15], fov: 45 }}
         >
             {/* Deep blue ambient light */}
-            <ambientLight intensity={5} color="#90d4ff" />
+            <ambientLight intensity={4} color="#90d4ff" />
             {/* Configure OrbitControls to enable panning and control zoom based on device type */}
             <OrbitControls
                 enablePan={false} // Enable panning (dragging)

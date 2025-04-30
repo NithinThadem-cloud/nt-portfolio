@@ -13,7 +13,7 @@ export function Room(props) {
     // Load the GLB models
     const characterGltf = useGLTF("/models/nithin-time.glb");
     const screenGltf = useGLTF("/models/screen.glb");
-    const planetGltf = useGLTF("/models/starry_night.glb"); // Load the planet model
+    //const planetGltf = useGLTF("/models/starry_night.glb"); // Load the planet model
 
     // Extract animations for the character
     const { actions } = useAnimations(characterGltf.animations, groupRef);
@@ -21,7 +21,7 @@ export function Room(props) {
     // Debug: Log the GLTF data
     console.log("Character GLTF Data:", characterGltf);
     console.log("Screen GLTF Data:", screenGltf);
-    console.log("Planet GLTF Data:", planetGltf);
+    //console.log("Planet GLTF Data:", planetGltf);
 
     // Use existing materials from the .glb files
     const bodyMaterial = characterGltf.materials?.avaturn_body_material;
@@ -65,19 +65,19 @@ export function Room(props) {
             /> {/* Additional point light for depth */}
 
             {/* Render the planet as the deepest background */}
-            <mesh
+            {/*<mesh
                 ref={planetRef}
                 position={[0, 5, -50]} // Move further back
                 scale={1000} // Increase scale to fill the background
             >
                 <primitive object={planetGltf.scene} />
-            </mesh>
+            </mesh>*/}
 
             {/* Render the screen model as background */}
             <mesh
                 ref={screensRef}
-                position={[0, 1.5, -26]} // Position the screen behind the character
-                scale={20} // Scale the screen model as needed
+                position={[0, 5, -26]} // Position the screen behind the character
+                scale={28} // Scale the screen model as needed
             >
                 <primitive object={screenGltf.scene} />
             </mesh>
@@ -96,7 +96,7 @@ export function Room(props) {
             )}
 
             {/* Group for character animations */}
-            <group ref={groupRef} scale={3.2} position={[0, 0, 0]}> {/* Center the character */}
+            <group ref={groupRef} scale={3.9} position={[0, 0, 0]}> {/* Center the character */}
                 {/* Render the avatar body */}
                 <mesh
                     geometry={characterGltf.scene.children.find((child) => child.name === "avaturn_body")?.geometry}
@@ -138,4 +138,4 @@ export function Room(props) {
 // Preload all models
 useGLTF.preload("/models/nithin-time.glb");
 useGLTF.preload("/models/screen.glb");
-useGLTF.preload("/models/starry_night.glb");
+//useGLTF.preload("/models/starry_night.glb");
