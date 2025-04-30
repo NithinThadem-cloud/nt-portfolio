@@ -6,18 +6,29 @@ import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 import { Suspense } from "react";
+import {ParametricGeometries as THREE} from "three-stdlib";
 
 const HeroExperience = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
     const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
     return (
-        <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-            {/* deep blue ambient */}
-            <ambientLight intensity={3} color="#fffff" />
-            {/* Configure OrbitControls to disable panning and control zoom based on device type */}
+        <Canvas
+            style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                zIndex: 0, // Ensure the canvas is behind DOM elements
+            }}
+            camera={{ position: [0, 0, 15], fov: 45 }}
+        >
+            {/* Deep blue ambient light */}
+            <ambientLight intensity={5} color="#90d4ff" />
+            {/* Configure OrbitControls to enable panning and control zoom based on device type */}
             <OrbitControls
-                enablePan={false} // Prevents panning of the scene
+                enablePan={false} // Enable panning (dragging)
                 enableZoom={!isTablet} // Disables zoom on tablets
                 maxDistance={20} // Maximum distance for zooming out
                 minDistance={5} // Minimum distance for zooming in
@@ -27,7 +38,7 @@ const HeroExperience = () => {
 
             <Suspense fallback={null}>
                 <HeroLights />
-                <Particles count={100} />
+                <Particles count={50} />
                 <group
                     scale={isMobile ? 0.7 : 1}
                     position={[0, -3.5, 0]}

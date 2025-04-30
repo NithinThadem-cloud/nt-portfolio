@@ -20,8 +20,8 @@ export default function HeroLights({ bloomSelection = [] }) {
                 position={[5, 6, 5]}
                 angle={0.4}
                 penumbra={0.5}
-                intensity={1.0}
-                castShadow
+                intensity={0.5}
+                castShadow={true}
                 shadow-mapSize-width={1024}
                 shadow-mapSize-height={1024}
             />
@@ -35,7 +35,7 @@ export default function HeroLights({ bloomSelection = [] }) {
                 color="#88aaff"
             />
 
-            {/* Rim/back light */}
+            {/* Rim/backlight */}
             <spotLight
                 position={[0, 6, -6]}
                 angle={0.5}
@@ -52,7 +52,7 @@ export default function HeroLights({ bloomSelection = [] }) {
             />
 
             {/* Subtle point lights for atmospheric tone */}
-            <pointLight position={[0, 3, 0]} intensity={0.5} color="#ffffff" />
+            <pointLight position={[0, 4, 0]} intensity={0.9} color="#ffffff" />
             <pointLight position={[1, 2, -2]} intensity={0.5} color="#ffffff" />
 
             {/* Optional bloom on your screens/meshes */}
