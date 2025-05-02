@@ -91,7 +91,27 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "React Developer",
+    name: "GCP",
+    imgPath: "/images/logos/react.png",
+  },
+  {
+    name: "Python Developer",
+    imgPath: "/images/logos/python.svg",
+  },
+  {
+    name: "Backend Developer",
+    imgPath: "/images/logos/node.png",
+  },
+  {
+    name: "Interactive Developer",
+    imgPath: "/images/logos/three.png",
+  },
+  {
+    name: "Project Manager",
+    imgPath: "/images/logos/git.svg",
+  },
+  {
+    name: "GCP",
     imgPath: "/images/logos/react.png",
   },
   {
@@ -114,7 +134,37 @@ const techStackImgs = [
 
 const techStackIcons = [
   {
-    name: "React Developer",
+    name: "GCP",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Python Developer",
+    modelPath: "/models/python-transformed.glb",
+    scale: 0.8,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Backend Developer",
+    modelPath: "/models/node-transformed.glb",
+    scale: 5,
+    rotation: [0, -Math.PI / 2, 0],
+  },
+  {
+    name: "Interactive Developer",
+    modelPath: "/models/three.js-transformed.glb",
+    scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Project Manager",
+    modelPath: "/models/git-svg-transformed.glb",
+    scale: 0.05,
+    rotation: [0, -Math.PI / 4, 0],
+  },
+  {
+    name: "GCP",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
@@ -150,8 +200,8 @@ const expCards = [
     review: "Nithin’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
-    title: "DevOps Engineer",
-    date: "March 2019 - May 2020",
+    title: "DevOps | SRE | Cloud Engineer",
+    date: "October 2024 - Present",
     responsibilities: [
       "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
       "Improved app performance and user experience through code optimization and testing.",
@@ -163,7 +213,7 @@ const expCards = [
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
     title: "DevOps Engineer",
-    date: "March 2019 - May 2020",
+    date: "April 2024 - October 2024",
     responsibilities: [
       "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
       "Improved app performance and user experience through code optimization and testing.",
@@ -175,7 +225,7 @@ const expCards = [
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
     title: "System validation and connectivity engineer",
-    date: "June 2020 - December 2023",
+    date: "May 2023 - January 2024",
     responsibilities: [
       "Led the development of Docker's web applications, focusing on scalability.",
       "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
@@ -187,7 +237,7 @@ const expCards = [
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
     title: "Firmware Engineer",
-    date: "January 2023 - Present",
+    date: "July 2022 - January 2023",
     responsibilities: [
       "Developed and maintained user-facing features for the Hostinger website.",
       "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
