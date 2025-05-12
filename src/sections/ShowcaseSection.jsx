@@ -49,16 +49,14 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
+              <img src="/images/Restaurants-club.png" alt="Restaurants club Interface" />
             </div>
             <div className="text-content">
               <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
+                Aigot - Restaurants Club - Full-Stack Infrastructure Engineer & DevOps Lead
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                Building scalable, secure, and automated cloud infrastructure for Aigot Restaurants Club using GCP, Kubernetes, Terraform, and more.
               </p>
             </div>
           </div>
@@ -67,18 +65,24 @@ const AppShowcase = () => {
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
-                  src="/images/project2.png"
-                  alt="Library Management Platform"
+                  src="/images/thoughtly-project.png"
+                  alt="DevOps Automation at Zemoso (Thoughtly)"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
+              <h2>DevOps Automation at Zemoso (Thoughtly)</h2>
+              <p className="text-white-30 md:text-">
+                Building scalable, secure, and automated CI/CD pipelines with Jenkins, GitHub Actions, and Terraform for efficient software delivery.
+              </p>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+                <img src="/images/Cellino-biotech.png" alt="Infrastructure Maintenance at Cellinobio" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Infrastructure Maintenance at Cellinobio (Zemoso)</h2>
+              <p className="text-white-50 md:text-">
+                Automating cloud infrastructure and containerized applications using Kubernetes, Docker, and GCP for seamless operations.
+              </p>
             </div>
           </div>
         </div>

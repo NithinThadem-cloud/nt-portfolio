@@ -1,16 +1,16 @@
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { useMediaQuery } from "react-responsive";
+import {OrbitControls} from "@react-three/drei";
+import {Canvas} from "@react-three/fiber";
+import {useMediaQuery} from "react-responsive";
 
-import { Room } from "./Room";
+import {Room} from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
-import { Suspense } from "react";
+import {Suspense} from "react";
 import {ParametricGeometries as THREE} from "three-stdlib";
 
 const HeroExperience = () => {
-    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-    const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+    const isMobile = useMediaQuery({query: "(max-width: 768px)"});
+    const isTablet = useMediaQuery({query: "(max-width: 1024px)"});
 
     return (
         <Canvas
@@ -22,10 +22,10 @@ const HeroExperience = () => {
                 height: "100%",
                 zIndex: 0, // Ensure the canvas is behind DOM elements
             }}
-            camera={{ position: [0, 0, 15], fov: 45 }}
+            camera={{position: [0, 0, 15], fov: 45}}
         >
             {/* Deep blue ambient light */}
-            <ambientLight intensity={4} color="#90d4ff" />
+            <ambientLight intensity={4} color="#90d4ff"/>
             {/* Configure OrbitControls to enable panning and control zoom based on device type */}
             <OrbitControls
                 enablePan={false} // Enable panning (dragging)
@@ -37,14 +37,14 @@ const HeroExperience = () => {
             />
 
             <Suspense fallback={null}>
-                <HeroLights />
-                <Particles count={50} />
+                <HeroLights/>
+                <Particles count={50}/>
                 <group
                     scale={isMobile ? 0.7 : 1}
                     position={[0, -3.5, 0]}
                     rotation={[0, 0, 0]}
                 >
-                    <Room />
+                    <Room/>
                 </group>
             </Suspense>
         </Canvas>

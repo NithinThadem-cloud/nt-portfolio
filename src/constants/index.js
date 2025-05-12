@@ -11,7 +11,9 @@ const navLinks = [
     name: "Skills",
     link: "#skills",
   },
-  { name: "Projects", link: "#projects" },
+  /*{ name: "Projects",
+    link: "#projects",
+  },*/
   {
     name: "Testimonials",
     link: "#testimonials",
@@ -41,37 +43,73 @@ const counterItems = [
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/Kubernetes_logo.png",
+    imgPath: "/images/logos/Ansible.png",
   },
   {
-    imgPath: "/images/logos/company-logo-2.png",
+    imgPath: "/images/logos/Apache-Maven.png",
   },
   {
-    imgPath: "/images/logos/company-logo-3.png",
+    imgPath: "/images/logos/AWS.png",
   },
   {
-    imgPath: "/images/logos/company-logo-4.png",
+    imgPath: "/images/logos/Blender.png",
   },
   {
-    imgPath: "/images/logos/company-logo-5.png",
+    imgPath: "/images/logos/Cloudflare.png",
   },
   {
-    imgPath: "/images/logos/company-logo-6.png",
+    imgPath: "/images/logos/RabbitMQ.png",
   },
   {
-    imgPath: "/images/logos/company-logo-7.png",
+    imgPath: "/images/logos/Docker.png",
   },
   {
-    imgPath: "/images/logos/company-logo-8.png",
+    imgPath: "/images/logos/Git.png",
   },
   {
-    imgPath: "/images/logos/company-logo-9.png",
+    imgPath: "/images/logos/GitHub-Actions.png",
   },
   {
-    imgPath: "/images/logos/company-logo-10.png",
+    imgPath: "/images/logos/GitLab.png",
   },
   {
-    imgPath: "/images/logos/company-logo-11.png",
+    imgPath: "/images/logos/Google-Cloud.png",
+  },
+  {
+    imgPath: "/images/logos/Grafana.png",
+  },
+  {
+    imgPath: "/images/logos/HashiCorp-Terraform.png",
+  },
+  {
+    imgPath: "/images/logos/Helm.png",
+  },
+  {
+    imgPath: "/images/logos/Jenkins.png",
+  },
+  {
+    imgPath: "/images/logos/Linux.png",
+  },
+  {
+    imgPath: "/images/logos/MATLAB.png",
+  },
+  {
+    imgPath: "/images/logos/MongoDB.png",
+  },
+  {
+    imgPath: "/images/logos/Prometheus.png",
+  },
+  {
+    imgPath: "/images/logos/RabbitMQ.png",
+  },
+  {
+    imgPath: "/images/logos/Redis.png",
+  },
+  {
+    imgPath: "/images/logos/Vite.js.png",
+  },
+  {
+    imgPath: "/images/logos/WordPress.png",
   },
 ];
 
@@ -216,51 +254,55 @@ const techStackIcons = [
 
 const expCards = [
     {
-    review: "Nithin’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review: "Nithin transformed our GCP environment at aiGoT—his Terraform modules and automated pipelines on GKE and Cloud Run cut deployment toil by 90% and kept us rock-solid at 99.9% uptime.",
     imgPath: "/images/Aigot-logo.png",
     logoPath: "/images/Aigot-logo.png",
     title: "DevOps | SRE | Cloud Engineer",
     date: "October 2024 - Present",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Defined and managed GCP infrastructure via Terraform, cutting manual setup time by 90%.",
+      "Automated Docker-based CI/CD pipelines with GitHub, reducing deploys from hours to minutes.",
+      "Architected GKE clusters with Prometheus/Grafana monitoring and PagerDuty alerts, sustaining 99.9% uptime.",
+      "Optimized resource usage (Savings Plans, rightsizing) to slash cloud costs by 35%.",
     ],
   },
   {
-    review: "Nithin’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review: "Under Nithin’s guidance, we containerized legacy services in GKE and implemented GitOps workflows—our release cadence doubled and rollbacks became nearly unheard of.",
     imgPath: "/images/Zemoso-small.png",
     logoPath: "/images/Zemoso.png",
     title: "DevOps Engineer (Zemoso Technologies)",
     date: "April 2024 - October 2024",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Containerized legacy apps with Docker and migrated them into GKE using Helm charts for zero-downtime rollouts.",
+      "Built GitOps pipelines (Argo CD + Jenkins) with security scans and rollback hooks, boosting deployment confidence.",
+      "Centralized logs in ELK and set up synthetic checks in Grafana, cutting MTTR by 50%.",
+      "Trained 3+ engineers on Kubernetes best practices.",
     ],
   },
   {
-    review: "Nithin’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review: "Nithin’s comprehensive quality and performance testing of washing machines, tumble dryers, dishwashers, and washer-dryers using Python/Robot-framework ensured our products shipped with rock-solid reliability and drove a 30% reduction in field failures.",
     imgPath: "/images/elux.png",
     logoPath: "/images/Electrolux-logo.png",
     title: "System validation and connectivity engineer (Electrolux Italia)",
     date: "May 2023 - January 2024",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed and executed end-to-end quality and performance tests for washing machines, tumble dryers, dishwashers, and washer-dryers using Python/Robot-framework.",
+      "Automated daily Jenkins regression runs to catch 80% of regressions before feature freeze.",
+      "Validated Wi-Fi, BLE, MQTT and CoAP connectivity against AWS/Azure IoT hubs and CE/FCC standards.",
+      "Debugged hardware and protocol issues with oscilloscopes and Wireshark, reducing field failures by 30%.",
     ],
   },
   {
-    review: "Nithin brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Nithin’s real-time implementation of a fault-tolerant symmetrical six-phase motor-drive on STM32 proved his simulations in practice—delivering cost-effective inverter designs that maintain torque under fault conditions with minimal ripple.",
     imgPath: "/images/stm-logo-small.png",
     logoPath: "/images/stm-logo.png",
     title: "Firmware Engineer",
     date: "July 2022 - January 2023",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Modeled a symmetrical six-phase induction machine to evaluate motor-drive reliability and fault scenarios.",
+      "Explored and compared multiple fault-tolerance schemes, highlighting post-fault current reconfiguration to cut inverter costs.",
+      "Implemented the selected reconfiguration algorithm on an STM32 microcontroller using IAR Embedded Workbench.",
+      "Validated real-time performance—preserving magnetomotive force and torque under fault with only minor ripple.",
     ],
   },
 ];
@@ -287,17 +329,17 @@ const expLogos = [
 const testimonials = [
   {
     name: "Nicola Marmugi",
-    mentions: "estherhoward",
+    mentions: "nicolamarmugi",
     review:
       "Nithin delivered a robust DevOps solution that reduced our deployment time by 70%. His expertise in GitHub Actions and infrastructure automation was crucial for our digital transformation.",
-    imgPath: "/images/client1.png",
+    imgPath: "/images/Nico.png",
   },
   {
     name: "Salvatore Galati",
-    mentions: "wadewarren",
+    mentions: "salvatoregalati",
     review:
       "Nithin’s infrastructure automation solutions saved us countless hours. His Kubernetes and Terraform implementation was both elegant and efficient.",
-    imgPath: "/images/client3.png",
+    imgPath: "/images/Salvo.png",
   },
   {
     name: "Piermatteo Grieco",
@@ -315,35 +357,37 @@ const testimonials = [
   },
   {
     name: "Francesco Postorino",
-    mentions: "floydmiles",
+    mentions: "francescopostorini",
     review:
       "Working with Nithin was a pleasure. He deployed a secure Netbird-based VPN on GCP and conducted performance testing with Gatling. His attention to detail is unmatched.",
-    imgPath: "/images/client4.png",
+    imgPath: "/images/posto.png",
   },
   {
     name: "Katia Pasini",
-    mentions: "albertflores",
+    mentions: "katiapasini",
     review:
       "Nithin’s work on our Docker containerization strategy was exceptional. He optimized deployments with Kubernetes orchestration and managed MongoDB Atlas seamlessly.",
-    imgPath: "/images/client6.png",
+    imgPath: "/images/brando.png",
   },
 ];
 
 const socialImgs = [
   {
     name: "insta",
+    url: "https://www.instagram.com/nitin_yerola?igsh=MTJ3ZGd6OXQydzNzeg%3D%3D&utm_source=qr",
     imgPath: "/images/insta.png",
   },
-  {
+  /*{
     name: "fb",
     imgPath: "/images/fb.png",
-  },
-  {
+  },*/
+  /*{
     name: "x",
     imgPath: "/images/x.png",
-  },
+  },*/
   {
     name: "linkedin",
+    url: "https://www.linkedin.com/in/thadem-n-790bb520a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     imgPath: "/images/linkedin.png",
   },
 ];

@@ -17,14 +17,6 @@ const Hero = () => {
 
   return (
       <section id="hero" className="relative overflow-hidden">
-        {/* 3D Canvas as Background */}
-        <div
-            className="absolute top-0 left-0 w-full h-full z-0"
-            style={{ pointerEvents: "none" }} // Allow mouse events to pass through
-        >
-          <HeroExperience />
-        </div>
-
         {/* Overlay Content */}
         <div className="hero-layout relative z-10">
           {/* LEFT: Hero Content */}
@@ -36,10 +28,7 @@ const Hero = () => {
                   <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
-                        <span
-                            key={index}
-                            className="flex items-center md:gap-3 gap-1 pb-2"
-                        >
+                        <span key={index} className="flex items-center md:gap-3 gap-1 pb-2">
                         <img
                             src={word.imgPath}
                             alt="person"
@@ -61,15 +50,11 @@ const Hero = () => {
                 automating infrastructure and building scalable systems.
               </p>
 
-              <Button
-                  text="See My Work"
-                  className="md:w-80 md:h-16 w-60 h-12"
-                  id="counter"
-              />
+              <Button text="See My Work" className="md:w-80 md:h-16 w-60 h-12" id="counter" />
             </div>
           </header>
 
-          {/* RIGHT: Placeholder for Future Content */}
+          {/* RIGHT: 3D Model */}
           <figure>
             <div className="hero-3d-layout">
               <HeroExperience />
