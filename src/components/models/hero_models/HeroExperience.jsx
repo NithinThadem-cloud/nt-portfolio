@@ -6,7 +6,6 @@ import {Room} from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 import {Suspense} from "react";
-import {ParametricGeometries as THREE} from "three-stdlib";
 
 const HeroExperience = () => {
     const isMobile = useMediaQuery({query: "(max-width: 768px)"});
