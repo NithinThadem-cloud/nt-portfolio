@@ -44,7 +44,7 @@ const Certifications = () => {
                       href={certification.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:underline"
+                      className="text-blue-500 hover:underline relative"
                     >
                       View Certification
                     </a>
