@@ -41,12 +41,20 @@ const NavBar = () => {
             ))}
           </ul>
         </nav>
-
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact me</span>
-          </div>
-        </a>
+        <div className='flex items-center gap-5'>
+          <a
+              href="/CV/cv.pdf"
+              download="Nithin_CV.pdf"
+              className="cursor-pointer bg-white p-2 px-5 rounded-md"
+          >
+            <span className='text-black'>Download CV</span>
+          </a>
+          <a href="#contact" className="contact-btn group">
+            <div className="inner">
+              <span>Contact me</span>
+            </div>
+          </a>
+        </div>
       </div>
     </header>
   );

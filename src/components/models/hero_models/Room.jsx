@@ -8,11 +8,11 @@ export function Room(props) {
     // Refs for character, screens, and planet
     const groupRef = useRef(); // For character animations
     const screensRef = useRef(); // For screen model
-    const planetRef = useRef(); // For planet model
+    //const planetRef = useRef(); // For planet model
 
     // Load the GLB models
-    const characterGltf = useGLTF("/models/nithin-time.glb");
-    const screenGltf = useGLTF("/models/screen.glb");
+    const characterGltf = useGLTF("/models/nit.glb");
+    const screenGltf = useGLTF("/models/scrn.glb");
     //const planetGltf = useGLTF("/models/starry_night.glb"); // Load the planet model
 
     // Extract animations for the character
@@ -77,7 +77,7 @@ export function Room(props) {
             <mesh
                 ref={screensRef}
                 position={[0, 5, -26]} // Position the screen behind the character
-                scale={28} // Scale the screen model as needed
+                scale={25} // Scale the screen model as needed
             >
                 <primitive object={screenGltf.scene} />
             </mesh>
@@ -87,7 +87,7 @@ export function Room(props) {
                 <EffectComposer>
                     <SelectiveBloom
                         selection={screensRef.current}
-                        intensity={1.5}
+                        intensity={1.0}
                         luminanceThreshold={0.2}
                         luminanceSmoothing={0.9}
                         blendFunction={BlendFunction.ADD}
@@ -96,7 +96,7 @@ export function Room(props) {
             )}
 
             {/* Group for character animations */}
-            <group ref={groupRef} scale={3.9} position={[0, 0, 0]}> {/* Center the character */}
+            <group ref={groupRef} scale={3.0} position={[0, 0, 0]}> {/* Center the character */}
                 {/* Render the avatar body */}
                 <mesh
                     geometry={characterGltf.scene.children.find((child) => child.name === "avaturn_body")?.geometry}
@@ -136,6 +136,6 @@ export function Room(props) {
 }
 
 // Preload all models
-useGLTF.preload("/models/nithin-time.glb");
-useGLTF.preload("/models/screen.glb");
+useGLTF.preload("/models/nit.glb");
+useGLTF.preload("/models/scrn.glb");
 //useGLTF.preload("/models/starry_night.glb");

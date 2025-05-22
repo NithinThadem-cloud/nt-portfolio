@@ -1,15 +1,30 @@
-import {OrbitControls} from "@react-three/drei";
-import {Canvas} from "@react-three/fiber";
-import {useMediaQuery} from "react-responsive";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { useMediaQuery } from "react-responsive";
+import { Suspense, useState, useEffect } from "react";
 
-import {Room} from "./Room";
+import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
-import {Suspense} from "react";
 
 const HeroExperience = () => {
     const isMobile = useMediaQuery({query: "(max-width: 768px)"});
     const isTablet = useMediaQuery({query: "(max-width: 1024px)"});
+
+    // State to track whether the 3D model has loaded
+    const [, setIsLoaded] = useState(false);
+
+    // Simulate loading delay or handle actual asset loading
+    useEffect(() => {
+        // Simulate a delay for loading assets (replace with actual loader logic)
+        const timer = setTimeout(() => {
+            setIsLoaded(true);
+        }, 3000); // Adjust the delay based on your asset loading time
+
+        return () => clearTimeout(timer); // Cleanup timer on unmount
+    }, []);
+
+
 
     return (
         <Canvas

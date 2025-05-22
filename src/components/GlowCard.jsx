@@ -7,11 +7,11 @@ const GlowCard = ({ card, index, children }) => {
   // when mouse moves over a card, rotate the glow effect
   const handleMouseMove = (index) => (e) => {
     // get the current card
-    const card = cardRefs.current[index];
-    if (!card) return;
+    const cardElement = cardRefs.current[index];
+    if (!cardElement) return;
 
     // get the mouse position relative to the card
-    const rect = card.getBoundingClientRect();
+    const rect = cardElement.getBoundingClientRect();
     const mouseX = e.clientX - rect.left - rect.width / 2;
     const mouseY = e.clientY - rect.top - rect.height / 2;
 
@@ -22,10 +22,10 @@ const GlowCard = ({ card, index, children }) => {
     angle = (angle + 360) % 360;
 
     // set the angle as a CSS variable
-    card.style.setProperty("--start", angle + 60);
+    cardElement.style.setProperty("--start", angle + 60);
   };
 
-  // return the card component with the mouse move event
+  // Return the card component with the mouse move event
   return (
     <div
       ref={(el) => (cardRefs.current[index] = el)}
@@ -39,7 +39,12 @@ const GlowCard = ({ card, index, children }) => {
         ))}
       </div>
       <div className="mb-5">
-        <p className="text-white-50 text-lg">{card.review}</p>
+        {/* Check if card is defined and has a review property */}
+        {card && card.review ? (
+          <p className="text-white-50 text-lg">{card.review}</p>
+        ) : (
+          <p className="text-red-500 text-lg">No review available</p>
+        )}
       </div>
       {children}
     </div>

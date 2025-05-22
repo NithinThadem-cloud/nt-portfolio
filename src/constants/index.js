@@ -18,6 +18,10 @@ const navLinks = [
     name: "Testimonials",
     link: "#testimonials",
   },
+  {
+    name: "Certifications",
+    link: "#certifications",
+  }
 ];
 
 const words = [
@@ -146,6 +150,38 @@ const abilities = [
   }
 ];
 
+const certifications = [
+  {
+    review: "This certification validates my expertise in designing and implementing scalable cloud solutions on Google Cloud Platform.",
+    name: "Google Cloud Platform - Professional Cloud Architect",
+    issuer: "Google Cloud Platform (GCP)",
+    id: "0x58833fc641967b0ecdf63b5237e813573814f3d29981a2869e7fb7d59a2b14f6",
+    date: "March 2024",
+    url: "https://google.accredible.com/70e818c9-7f35-48b7-96f1-2764492d7f5e#acc.UqJsm13e ",
+    imgPath: "/images/GCP-Badge.png",
+  },
+  {
+    review: "The AWS Certified Developer – Associate certification validates my proficiency in designing, developing, deploying, and operating cloud-based applications using AWS services. ",
+    name: "AWS Certified Developer Associate",
+    issuer: "Udemy",
+    id: "UC-eef7ac7f-494f-4725-a5e0-d55bd4b0fe09",
+    date: "February 2024",
+    url: "https://www.udemy.com/certificate/UC-eef7ac7f-494f-4725-a5e0-d55bd4b0fe09/ ",
+    imgPath: "/images/AWS-CDA.png",
+  },
+  {
+    review: "The Google Cloud – Associate Cloud Engineer certification validates my foundational knowledge and practical skills in designing, deploying, and managing applications on Google Cloud Platform.",
+    name: "Google Cloud- Associate Cloud Engineer",
+    issuer: "Udemy",
+    id: "UC-a86ae51b-4e2a-44ff-bb5f-e7d59c5740a1|",
+    date: "February 2024",
+    url: "https://www.udemy.com/certificate/UC-a86ae51b-4e2a-44ff-bb5f-e7d59c5740a1/ ",
+    imgPath: "/images/GCP-ACE.png",
+  },
+];
+
+export { certifications };
+
 const techStackImgs = [
   {
     name: "GCP",
@@ -198,7 +234,7 @@ const techStackIcons = [
   },
   {
     name: "Docker",
-    modelPath: "/models/Docker-transformed.glb",
+    modelPath: "/models/docker.glb",
     scale: 0.05,
     rotation: [1.5, 0, 0],
   },
@@ -228,7 +264,7 @@ const techStackIcons = [
   },
   {
     name: "Grafana",
-    modelPath: "/models/Grafana-transformed.glb",
+    modelPath: "/models/grafana.glb",
     scale: 0.05,
     rotation: [1.5, 0, 0],
   },
@@ -246,7 +282,7 @@ const techStackIcons = [
   },
   {
     name: "Jenkins",
-    modelPath: "/models/Jenkins-transformed.glb",
+    modelPath: "/models/jenkins.glb",
     scale: 0.05,
     rotation: [1.5, 0, 0],
   },
